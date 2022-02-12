@@ -5,9 +5,11 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Shuffle/>
-      <Reverse/>
+    <div className="app">
+      <div className="inputs-wrapper">
+        <Shuffle/>
+        <Reverse/>
+      </div>
       <Common/>
     </div>
   );

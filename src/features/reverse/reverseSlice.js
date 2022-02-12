@@ -13,7 +13,7 @@ export const reverseSlice = createSlice({
 });
 
 export const { reverse } = reverseSlice.actions;
-
+export const reverseSelector = (state) => state.reverse.reversedString;
 export default reverseSlice.reducer;
 
 function reverseString (str) {

@@ -14,7 +14,11 @@ export const shuffleSlice = createSlice({
 
 export const { shuffle } = shuffleSlice.actions;
 
+export const shuffleSelector = (state) => state.shuffle.shuffledString;
+
 export default shuffleSlice.reducer;
+
+// HELPERS
 
 function shuffleString (str) {
   let charsArray = str.split('');

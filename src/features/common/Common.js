@@ -5,13 +5,14 @@ export function Common () {
   const reversedStr = useSelector((state) => state.reverse.reversedString);
 
   return (
-    <div>
+    <section className="common">
+      <h2>Results from both</h2>
       <div>
         {shuffledStr}
       </div>
       <div>
         {reversedStr}
       </div>
-    </div>
+    </section>
   )
 }

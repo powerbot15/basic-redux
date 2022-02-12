@@ -1,13 +1,14 @@
 import { useSelector, useDispatch } from "react-redux";
-import { reverse } from "./reverseSlice";
+import { reverse, reverseSelector } from "./reverseSlice";
 
 export function Reverse() {
   const dispatch = useDispatch();
-  const reversedStr = useSelector((state) => state.reverse.reversedString);
+  const reversedStr = useSelector(reverseSelector);
   return (
-    <div>
+    <section className="reverse input-area">
+      <h2>Reverse String</h2>
       <input type="text" onInput={(e) => {dispatch(reverse(e.target.value))}}/>
       <div>{reversedStr}</div>
-    </div>
+    </section>
   );
 }
